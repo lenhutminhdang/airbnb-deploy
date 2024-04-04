@@ -19,12 +19,30 @@ const jwtSecret = process.env.JWT;
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    credentials: true,
-    origin: "https://airbnb-06.onrender.com",
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: process.env.ORIGIN,
+//   })
+// );
+
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", process.env.ORIGIN);
+
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type"
+  );
+
+  res.setHeader("Access-Control-Allow-Credentials", true);
+
+  next();
+});
 
 mongoose.connect(process.env.MONGO_URL);
 
