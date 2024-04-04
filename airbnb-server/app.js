@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: process.env.ORIGIN,
+    origin: "https://airbnb-06.onrender.com",
   })
 );
 
