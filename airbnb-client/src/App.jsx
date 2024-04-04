@@ -17,7 +17,8 @@ import PlaceDetails from "./pages/PlaceDetails";
 import Booking from "./pages/account/Booking";
 import Error from "./pages/Error";
 
-axios.defaults.baseURL = "http://localhost:8080";
+// axios.defaults.baseURL = "http://localhost:8080";
+axios.defaults.baseURL = "https://airbnb-api-8qwg.onrender.com";
 axios.defaults.withCredentials = true;
 // axios.defaults.timeout = 5000;
 
