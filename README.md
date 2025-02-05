@@ -4,7 +4,9 @@
 
 ![airbnb clone](airbnb-client/public/desc.png)
 
-MERN stack app
+## Video Demo
+
+[Demo Video](https://youtu.be/vzwhi890_mQ)
 
 ## Guide
 
